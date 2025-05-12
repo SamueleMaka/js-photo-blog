@@ -62,10 +62,20 @@ img, picture, video, canvas, svg {
     top: -2.5%
 }
 
-#card-image{
+.card-image{
     aspect-ratio: 1;
 }
-
+.date{
+  color: grey;
+  font-size: 0.8rem;
+  font-family: "Sometype Mono", monospace;
+  margin-top: 1rem;;
+}
+.description{
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
 
 @media (max-width: 1024px) {
   .cards-container {
