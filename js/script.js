@@ -2,14 +2,17 @@ axios.get('https://lanciweb.github.io/demo/api/pictures/')
   .then(response => {
     const images = response.data;
 
-    const cardImages = document.querySelectorAll('.card-image');
-    const cardDates = document.querySelectorAll('.date');
-    const cardDescriptions = document.querySelectorAll('.description');
-    for (let i = 0; i < cardImages.length; i++) {
+    const cardContainer = document.getElementById('cards-container');
+    for (let i = 0; i < images.length; i++) {
       if (images[i]) {
-        cardImages[i].src = images[i].url;  
-        cardDates[i].innerHTML = images[i].date;
-        cardDescriptions[i].innerHTML = images[i].title;
+        cardContainer.innerHTML+= `
+          <div class="card-container">
+          <img src="img/pin.svg" alt="" class="image-pin">
+          <img src="${images[i].url}" alt="" class="card-image">
+          <div class="date">${images[i].date}</div>
+          <div class="description">${images[i].title}</div>
+          </div>
+        `
       }
     }
   })

@@ -40,7 +40,7 @@ img, picture, video, canvas, svg {
     font-size: 5rem;
 }
 
-.cards-container{
+#cards-container{
     display: grid;
     grid-template-columns: repeat(3, 1fr);  
     gap: 2rem;  
@@ -78,7 +78,7 @@ img, picture, video, canvas, svg {
 }
 
 @media (max-width: 1024px) {
-  .cards-container {
+  #cards-container {
     grid-template-columns: repeat(2, 1fr); /* 2 colonne su tablet */
   }
   .header-container h1{
@@ -88,7 +88,7 @@ img, picture, video, canvas, svg {
 
 /* Mobile (fino a 599px) */
 @media (max-width: 599px) {
-  .cards-container {
+  #cards-container {
     grid-template-columns: 1fr; /* 1 colonna su mobile */
   }
   .header-container h1{
