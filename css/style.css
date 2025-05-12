@@ -59,7 +59,7 @@ img, picture, video, canvas, svg {
     position: absolute;
     transform: translateX(-50%);
     left: 50%;
-    top: -5%
+    top: -2.5%
 }
 
 #card-image{
