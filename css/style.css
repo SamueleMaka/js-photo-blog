@@ -1,0 +1,87 @@
+/* Quick CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: "Edu TAS Beginner", cursive;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+body{
+    background-image: url("../img/cork.png");
+    background-size: cover;
+}
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+
+
+.header-container{
+    background-image: url("../img/wall.png");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100%;
+}
+.body-container{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.header-container h1{
+    font-size: 5rem;
+}
+
+.cards-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);  
+    gap: 2rem;  
+    padding: 2rem;
+    
+}
+
+.card-container{
+    background-color: white;
+    padding: 1rem;
+    position: relative;
+}
+
+.image-pin{
+    height: 1.5rem;
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+    top: -5%
+}
+
+#card-image{
+    aspect-ratio: 1;
+}
+
+
+@media (max-width: 1024px) {
+  .cards-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 colonne su tablet */
+  }
+  .header-container h1{
+    font-size: 4rem;
+  }
+}
+
+/* Mobile (fino a 599px) */
+@media (max-width: 599px) {
+  .cards-container {
+    grid-template-columns: 1fr; /* 1 colonna su mobile */
+  }
+  .header-container h1{
+    font-size: 3rem;
+  }
+}
